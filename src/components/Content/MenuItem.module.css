@@ -3,8 +3,12 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 0.5px solid rgba(128, 128, 128, 0.5);
-    margin-bottom: 1.5rem;
+    margin-top: 1rem;
     padding: 0.5rem 0;
+}
+
+.menu-item:first-child{
+    margin-top: 0;
 }
 
 .description{
@@ -15,6 +19,6 @@
 
 .price{
     font-size: 1.3rem;
-    font-weight: bold;
+    font-weight:bolder;
     color: brown;
 }

@@ -17,11 +17,15 @@
 
 .orders{
     background-color: brown;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.8rem;
     border-radius: 25px;
 }
 
 .orders:hover, 
 .orders:active{
     background-color: #92320c;
+}
+
+.cart{
+    font-size: 1rem;
 }

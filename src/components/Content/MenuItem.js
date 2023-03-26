@@ -1,4 +1,5 @@
 import classes from './MenuItem.module.css';
+import ItemForm from './ItemForm';
 
 const MenuItem = (props) => {
     return (
@@ -8,10 +9,7 @@ const MenuItem = (props) => {
                 <p className={classes.description}>{props.description}</p>
                 <p className={classes.price}>{`$${props.price}`}</p>
             </div>
-            <div>
-                <p>Amount</p>
-                <button>+ Add</button>
-            </div>
+            <ItemForm />
         </section>
     );
 }
