@@ -28,7 +28,7 @@ const DUMMY_MEALS = [
     name: "Italian Breakfast",
     description:
       "The Italians keep it classy with a fresh cup of cappuccino and cornetto. A cornetto is similar to a croissant, but less buttery, and is filled with sweet cream.",
-    price: 18.99,
+    price: 18.99
   },
 ];
 

@@ -1,10 +1,29 @@
 import classes from "./ItemForm.module.css";
 import Input from '../UI/Input';
+import { useRef, useState} from "react";
 
-const ItemForm = () => {
+
+const ItemForm = props => {
+    const amountInputRef = useRef();
+    const [amountIsValid, setAmountIsValid] = useState(true);
+
+    const submitHandler = event => {
+        event.preventDefault();
+
+        const enteredAmount = amountInputRef.current.value;
+        const enteredAmountNumber = +enteredAmount;
+
+        if(enteredAmount.trim().length === 0 || enteredAmountNumber < 1 || enteredAmountNumber > 10){
+             setAmountIsValid(false);
+            return; 
+        }
+
+        props.onAddCartItem(enteredAmountNumber);
+    }
   return (
-    <form className={classes.form}>
+    <form className={classes.form} onSubmit={submitHandler}>
         <Input htmlFor="orderNumber"
+        ref={amountInputRef}
         props=
         {{
         label: "Amount",
@@ -17,6 +36,7 @@ const ItemForm = () => {
         }}
       />
       <button>+ Add</button>
+      {!amountIsValid && <p>Please enter a valid amount (1-10)</p>}
     </form>
   );
 };
