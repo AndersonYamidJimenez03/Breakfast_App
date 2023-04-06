@@ -19,6 +19,7 @@ const ItemForm = props => {
         }
 
         props.onAddCartItem(enteredAmountNumber);
+        setAmountIsValid(true);
     }
   return (
     <form className={classes.form} onSubmit={submitHandler}>
